@@ -1,5 +1,5 @@
 # Coursera_PracticalMachineLearning_Project
-## This directory includes a README.md, index.rmd and index.html
+## This directory includes index.rmd and index.html
 ### index.rmd and index.html
 #### - describes the goal of the project
 #### - the data 
