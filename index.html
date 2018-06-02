@@ -15,16 +15,16 @@ xmlns="http://www.w3.org/TR/REC-html40">
  <o:DocumentProperties>
   <o:Author>Xing Zhang</o:Author>
   <o:LastAuthor>Xing Zhang</o:LastAuthor>
-  <o:Revision>10</o:Revision>
-  <o:TotalTime>220</o:TotalTime>
+  <o:Revision>12</o:Revision>
+  <o:TotalTime>227</o:TotalTime>
   <o:Created>2018-06-02T03:49:00Z</o:Created>
-  <o:LastSaved>2018-06-02T05:24:00Z</o:LastSaved>
+  <o:LastSaved>2018-06-02T05:44:00Z</o:LastSaved>
   <o:Pages>1</o:Pages>
-  <o:Words>1391</o:Words>
-  <o:Characters>7933</o:Characters>
-  <o:Lines>66</o:Lines>
+  <o:Words>1419</o:Words>
+  <o:Characters>8093</o:Characters>
+  <o:Lines>67</o:Lines>
   <o:Paragraphs>18</o:Paragraphs>
-  <o:CharactersWithSpaces>9306</o:CharactersWithSpaces>
+  <o:CharactersWithSpaces>9494</o:CharactersWithSpaces>
   <o:Version>16.00</o:Version>
  </o:DocumentProperties>
  <o:CustomDocumentProperties>
@@ -1797,7 +1797,7 @@ Calibri;mso-bidi-theme-font:minor-latin'><o:p>&nbsp;</o:p></span></b></p>
 <p class=MsoNormal style='margin-top:0in;margin-right:3.0in;margin-bottom:8.0pt;
 margin-left:3.0in'><b style='mso-bidi-font-weight:normal'><span
 style='font-size:16.0pt;mso-bidi-font-size:11.0pt;line-height:105%;mso-bidi-font-family:
-Calibri;mso-bidi-theme-font:minor-latin'>Step 4: Training and testing<o:p></o:p></span></b></p>
+Calibri;mso-bidi-theme-font:minor-latin'>Step 4: Training and Cross-Validation<o:p></o:p></span></b></p>
 
 <p class=MsoNormal style='margin-top:0in;margin-right:3.0in;margin-bottom:8.0pt;
 margin-left:3.0in'><b style='mso-bidi-font-weight:normal'><span
@@ -2133,8 +2133,8 @@ normal'><span style='font-size:14.0pt;mso-bidi-font-size:11.0pt;line-height:
 <p class=MsoNormal style='margin-top:0in;margin-right:3.0in;margin-bottom:8.0pt;
 margin-left:3.0in'><b style='mso-bidi-font-weight:normal'><span
 style='font-size:14.0pt;mso-bidi-font-size:11.0pt;line-height:105%;mso-bidi-font-family:
-Calibri;mso-bidi-theme-font:minor-latin'>4.4 Compare the algorithms and pick
-the best performing one<o:p></o:p></span></b></p>
+Calibri;mso-bidi-theme-font:minor-latin'>4.4 Evaluate the algorithms based on cross-validation
+and pick the best performing one<o:p></o:p></span></b></p>
 
 <table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
  style='margin-left:3.0in;border-collapse:collapse;border:none;mso-border-alt:
@@ -2144,9 +2144,10 @@ the best performing one<o:p></o:p></span></b></p>
   <td width=839 valign=top style='width:629.55pt;border:solid windowtext 1.0pt;
   mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt;height:32.3pt'>
   <p class=MsoNormal style='margin-top:0in;margin-right:3.0in;margin-bottom:
-  0in;margin-left:0in;margin-bottom:.0001pt;line-height:normal'><span
-  style='font-size:12.0pt;mso-bidi-font-size:11.0pt;mso-bidi-font-family:Calibri;
-  mso-bidi-theme-font:minor-latin'>Performance on testing data<o:p></o:p></span></p>
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:normal'><b
+  style='mso-bidi-font-weight:normal'><span style='font-size:12.0pt;mso-bidi-font-size:
+  11.0pt;mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin'>Performance
+  on testing data<o:p></o:p></span></b></p>
   <p class=MsoListParagraph style='margin-top:0in;margin-right:3.0in;
   margin-bottom:0in;margin-left:.5in;margin-bottom:.0001pt;mso-add-space:auto;
   text-indent:-.25in;line-height:normal;mso-list:l1 level1 lfo4'><![if !supportLists]><span
@@ -2474,8 +2475,10 @@ the best performing one<o:p></o:p></span></b></p>
 <p class=MsoNormal style='margin-top:0in;margin-right:3.0in;margin-bottom:8.0pt;
 margin-left:3.0in'><span style='font-size:14.0pt;mso-bidi-font-size:11.0pt;
 line-height:105%;mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin'>Random
-forest is a clear <span class=GramE>winner, since</span> it has the highest
-accuracy rate.<o:p></o:p></span></p>
+forest is a clear winner, since it has the highest accuracy rate on the testing
+data set. The <span style='background:yellow;mso-highlight:yellow'>0.9985</span>
+accuracy rate indicates that we can expect an out-of-sample error rate of less
+than 1% with random forest algorithm.<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-top:0in;margin-right:3.0in;margin-bottom:8.0pt;
 margin-left:3.0in'><b style='mso-bidi-font-weight:normal'><span
@@ -2529,8 +2532,8 @@ Proceedings of 4th International Conference in Cooperation with SIGCHI
 <p class=MsoNormal style='margin-top:0in;margin-right:3.0in;margin-bottom:8.0pt;
 margin-left:3.0in'><span style='font-size:12.0pt;line-height:105%;mso-bidi-font-family:
 Helvetica;color:#333333'>Hastie T, <span class=SpellE>Tibshirani</span> R,
-Friedman JH (2009). The Elements of Statistical Learning: Data Mining,
-Inference, and Prediction, 2nd edition.<o:p></o:p></span></p>
+Friedman JH (2009). The Elements of Statistical Learning: Data Mining, Inference,
+and Prediction, 2nd edition.<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-top:0in;margin-right:3.0in;margin-bottom:8.0pt;
 margin-left:3.0in'><b style='mso-bidi-font-weight:normal'><span
