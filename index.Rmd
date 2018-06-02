@@ -1,0 +1,194 @@
+---
+title: Practical Machine Learning Final Project
+subtitle: Coursera Data Science Specialization
+date: "June 1, 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Introduction 
+
+Thanks to the popularity of sports trackers, a large amount of data on personal activities can be collected for studying patterns of activities and predicting quality of activities. The goal of this project is to use the data from accelerometers of those trackers to predict the manner in which people do the exercise.
+
+Data Set: "Six young health participants were asked to perform one set of 10 repetitions of the Unilateral Dumbbell Biceps Curl in five different fashions: exactly according to the specification (Class A), throwing the elbows to the front (Class B), lifting the dumbbell only halfway (Class C), lowering the dumbbell only halfway (Class D) and throwing the hips to the front (Class E)."
+(excerpted from http://web.archive.org/web/20161224072740/http:/groupware.les.inf.puc-rio.br/har)
+
+* y variable is a categorical variable that measures the quality of the exercise (Class A to E as described above)
+
+* x variables are quantitative features describing the movements, examples include acceleration on the forearm on x, y and z directions
+
+## Step 1: Load the packages and the data set
+
+```{r eval=TRUE, echo=TRUE, message=FALSE, warning=FALSE}
+# Load packages
+#######################################
+list_packages <- c("caret", "nnet", "e1071", "dplyr", "rpart", "randomForest")
+
+index_uninstalled <- !(list_packages %in% installed.packages())
+
+if (any(index_uninstalled)) { install.packages(list_packages[index_uninstalled]) }
+
+library(dplyr)
+library(caret)
+library(nnet)
+library(rpart)
+library(randomForest)
+
+# Load data
+#######################################
+url_train <- "https://d396qusza40orc.cloudfront.net/predmachlearn/pml-training.csv"
+url_test <- "https://d396qusza40orc.cloudfront.net/predmachlearn/pml-testing.csv"
+
+path_train <- "data_train.csv"
+path_test <- "data_test.csv"
+
+if (!file.exists(path_train)) { download.file(url_train, path_train)}
+if (!file.exists(path_test)) { download.file(url_test, path_test)}
+
+data_train <- read.csv(path_train)
+data_test <- read.csv(path_test)
+
+if ("X" %in% names(data_train)) {data_train <- select(data_train, -X)}
+if ("X" %in% names(data_test)) {data_test <- select(data_test, -X)}
+```
+
+## Step 2: Remove Unusable Features
+
+```{r echo=TRUE}
+# First study features, then remove unusable ones
+# Study Features 1: factor variables
+#######################################
+class_col <- sapply(data_train, class)
+
+list_factor <- names(data_train)[class_col == "factor"]
+
+f_studyFactor <- function(data_with_only_factor) {
+  for (i in 1: ncol(data_with_only_factor) ){
+    cat("\n################################### \n ")
+    cat(" table #", i, names(data_with_only_factor)[i], "\n" )
+    output <- sort( table(data_with_only_factor[[i]], useNA = "ifany"), decreasing = T)
+    length_output <- min(10, length(output))
+    print(output[1:length_output])
+  }
+  }
+
+# f_studyFactor(data_train[list_factor])
+
+# Study Features 2: numerical variables
+#######################################
+index_num <- grep("num|int", class_col)
+
+f_studyNum <- function(data_with_only_num) {
+  for (i in 1: ncol(data_with_only_num) ){
+    cat("\n################################### \n ")
+    cat(" percentile #", i, names(data_with_only_num)[i], "\n" )
+    print(quantile(data_with_only_num[[i]], probs = seq(0, 1, 0.1), na.rm = TRUE ))
+    }
+  }
+
+# f_studyNum(data_train[ , index_num])
+
+# Remove 1: Remove cols with too many #DIV/0!
+###########################################
+list_speculate <- c("cvtd_timestamp", "new_window")
+list_keep <- c("classe", "user_name")
+list_remove <- setdiff(list_factor, list_keep)
+
+data_train <- select(data_train, - one_of(list_remove))
+data_test <- select(data_test, - one_of(list_remove))
+
+# Remove 2: Remove cols with lots of NA
+###########################################
+num_na_col <- sapply(data_train, function(x){x <- sum(is.na(x))})
+
+list_remove <- names(num_na_col)[num_na_col == 19216]
+
+data_train <- select(data_train, - one_of(list_remove))
+data_test <- select(data_test, - one_of(list_remove))
+```
+## Step 3: Normalize numerical features (necessary for multinomial logistic regression)
+
+```{r echo=TRUE}
+# Normalize features
+###########################################
+class_col <- sapply(data_train, class)
+index_num <- grep("num|int", class_col)
+
+scale_mean <- sapply(data_train[ , index_num], mean)
+scale_sd <- sapply(data_train[ , index_num], sd)
+
+data_train[ , index_num] <- (data_train[ , index_num] - rep(scale_mean, each = nrow(data_train)))/rep(scale_sd, each = nrow(data_train))
+
+data_test[ , index_num] <- (data_test[ , index_num] - rep(scale_mean, each = nrow(data_test)))/rep(scale_sd, each = nrow(data_test))
+```
+
+## Step 4: Training and Cross-Validation
+I tried three algorithms: multinomial logistic regression, decision trees and random forests.
+For each one of them, I trained on the training set and then did cross-validation using testing set.
+```{r echo=TRUE}
+# ML
+#######################################
+index_train <- createDataPartition(y = data_train$classe, p = 0.8, list = FALSE)
+
+dt_training <- data_train[index_train, ]
+dt_testing <- data_train[-index_train, ]
+
+## 1. multinomial logistic regression
+######################################
+modfit_logit <- multinom(classe ~ ., data = dt_training, trace = FALSE)
+
+# summary(modfit_logit)
+
+pred_logit_insample <- predict(modfit_logit, dt_training)
+# print(confusionMatrix(pred_logit_insample, dt_training$classe))
+
+pred_logit_test <- predict(modfit_logit, newdata = dt_testing)
+print(confusionMatrix(pred_logit_test, dt_testing$classe))
+```
+```{r echo=TRUE}
+## 2. decision tree
+######################################
+set.seed(12345)
+
+modfit_decisionTree <- rpart(classe ~ ., data = dt_training)
+
+pred_decisionTree_insample <- predict(modfit_decisionTree, dt_training, type = "class")
+# print(confusionMatrix(pred_decisionTree_insample, dt_training$classe))
+
+pred_decisionTree_test <- predict(modfit_decisionTree, newdata = dt_testing, type = "class")
+print(confusionMatrix(pred_decisionTree_test, dt_testing$classe))
+```
+```{r echo=TRUE}
+## 3. random forest
+######################################
+set.seed(12345)
+
+modfit_randomForest <- randomForest(classe ~ ., data = dt_training)
+
+pred_randomForest_insample <- predict(modfit_randomForest, dt_training, type = "class")
+# print(confusionMatrix(pred_randomForest_insample, dt_training$classe))
+
+pred_randomForest_test <- predict(modfit_randomForest, newdata = dt_testing, type = "class")
+print(confusionMatrix(pred_randomForest_test, dt_testing$classe))
+```
+
+
+## Step 5: Pick the best-performing algorithm and use it for the quiz 
+We can see there is a clear winner - random forest, since its accuracy on the testing data set is by far the highest. With an above 0.99 accuracy, we can expect the out-of-sample error to be below one percent.
+Using random forest to predict for the quiz
+```{r}
+pred_randomForest_quiz <- predict(modfit_randomForest, newdata = data_test[ , -57], type = "class")
+
+# print(pred_randomForest_quiz)
+```
+
+## References
+Velloso, E., Bulling, A., Gellersen, H., Ugulino, W. & Fuks, H. (2013). Qualitative Activity Recognition of Weight Lifting Exercises. Proceedings of 4th International Conference in Cooperation with SIGCHI.
+
+Hastie T, Tibshirani R, Friedman JH (2009). The Elements of Statistical Learning: Data Mining, Inference, and Prediction, 2nd edition.
+
+
+
