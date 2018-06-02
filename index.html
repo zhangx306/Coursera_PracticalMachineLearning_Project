@@ -1229,7 +1229,7 @@ set<o:p></o:p></span></b></p>
   <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
   normal'><span style='font-size:12.0pt;mso-bidi-font-size:11.0pt;mso-bidi-font-family:
   Calibri;mso-bidi-theme-font:minor-latin'><span
-  style='mso-spacerun:yes'> </span>install.packages(list_packages[index_uninstalled])<o:p></o:p></span></p>
+  style='mso-spacerun:yes'></span>install.packages(list_packages[index_uninstalled])<o:p></o:p></span></p>
   <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
   normal'><span style='font-size:12.0pt;mso-bidi-font-size:11.0pt;mso-bidi-font-family:
   Calibri;mso-bidi-theme-font:minor-latin'>}<o:p></o:p></span></p>
@@ -1262,7 +1262,7 @@ set<o:p></o:p></span></b></p>
   Calibri;mso-bidi-theme-font:minor-latin'>#######################################<o:p></o:p></span></p>
   <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
   normal'><span style='font-size:12.0pt;mso-bidi-font-size:11.0pt;mso-bidi-font-family:
-  Calibri;mso-bidi-theme-font:minor-latin'>url_train &lt;- &quot;https://d396qusza40orc.cloudfront.net/predmachlearn/pml-training.csv&quot;uiui<o:p></o:p></span></p>
+  Calibri;mso-bidi-theme-font:minor-latin'>url_train &lt;- &quot;https://d396qusza40orc.cloudfront.net/predmachlearn/pml-training.csv&quot;uiuiui<o:p></o:p></span></p>
   <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
   normal'><span style='font-size:12.0pt;mso-bidi-font-size:11.0pt;mso-bidi-font-family:
   Calibri;mso-bidi-theme-font:minor-latin'>url_test &lt;-
@@ -1372,39 +1372,39 @@ numerical variables <o:p></o:p></span></b></p>
   <p class=MsoNormal style='margin-top:0in;margin-right:3.0in;margin-bottom:
   0in;margin-left:0in;margin-bottom:.0001pt;line-height:normal'><span
   style='font-size:12.0pt;mso-bidi-font-size:11.0pt;mso-bidi-font-family:Calibri;
-  mso-bidi-theme-font:minor-latin'><span style='mso-spacerun:yes'> </span>for
+  mso-bidi-theme-font:minor-latin'><span style='mso-spacerun:yes'></span>for
   (i in 1: ncol(data_with_only_factor) ){<o:p></o:p></span></p>
   <p class=MsoNormal style='margin-top:0in;margin-right:3.0in;margin-bottom:
   0in;margin-left:0in;margin-bottom:.0001pt;line-height:normal'><span
   style='font-size:12.0pt;mso-bidi-font-size:11.0pt;mso-bidi-font-family:Calibri;
-  mso-bidi-theme-font:minor-latin'><span style='mso-spacerun:yes'>  
+  mso-bidi-theme-font:minor-latin'><span style='mso-spacerun:yes'> 
   </span>cat(&quot;\n################################### \n &quot;)<o:p></o:p></span></p>
   <p class=MsoNormal style='margin-top:0in;margin-right:3.0in;margin-bottom:
   0in;margin-left:0in;margin-bottom:.0001pt;line-height:normal'><span
   style='font-size:12.0pt;mso-bidi-font-size:11.0pt;mso-bidi-font-family:Calibri;
-  mso-bidi-theme-font:minor-latin'><span style='mso-spacerun:yes'>  
+  mso-bidi-theme-font:minor-latin'><span style='mso-spacerun:yes'> 
   </span>cat(&quot; table #&quot;, i, names(data_with_only_factor)[i],
   &quot;\n&quot; )<o:p></o:p></span></p>
   <p class=MsoNormal style='margin-top:0in;margin-right:3.0in;margin-bottom:
   0in;margin-left:0in;margin-bottom:.0001pt;line-height:normal'><span
   style='font-size:12.0pt;mso-bidi-font-size:11.0pt;mso-bidi-font-family:Calibri;
-  mso-bidi-theme-font:minor-latin'><span style='mso-spacerun:yes'>  
+  mso-bidi-theme-font:minor-latin'><span style='mso-spacerun:yes'> 
   </span>output &lt;- sort( table(data_with_only_factor[[i]], useNA =
   &quot;ifany&quot;), decreasing = T)<o:p></o:p></span></p>
   <p class=MsoNormal style='margin-top:0in;margin-right:3.0in;margin-bottom:
   0in;margin-left:0in;margin-bottom:.0001pt;line-height:normal'><span
   style='font-size:12.0pt;mso-bidi-font-size:11.0pt;mso-bidi-font-family:Calibri;
-  mso-bidi-theme-font:minor-latin'><span style='mso-spacerun:yes'>  
+  mso-bidi-theme-font:minor-latin'><span style='mso-spacerun:yes'> 
   </span>length_output &lt;- min(10, length(output))<o:p></o:p></span></p>
   <p class=MsoNormal style='margin-top:0in;margin-right:3.0in;margin-bottom:
   0in;margin-left:0in;margin-bottom:.0001pt;line-height:normal'><span
   style='font-size:12.0pt;mso-bidi-font-size:11.0pt;mso-bidi-font-family:Calibri;
-  mso-bidi-theme-font:minor-latin'><span style='mso-spacerun:yes'>  
+  mso-bidi-theme-font:minor-latin'><span style='mso-spacerun:yes'> 
   </span>print(output[1:length_output])<o:p></o:p></span></p>
   <p class=MsoNormal style='margin-top:0in;margin-right:3.0in;margin-bottom:
   0in;margin-left:0in;margin-bottom:.0001pt;line-height:normal'><span
   style='font-size:12.0pt;mso-bidi-font-size:11.0pt;mso-bidi-font-family:Calibri;
-  mso-bidi-theme-font:minor-latin'><span style='mso-spacerun:yes'> </span>}<o:p></o:p></span></p>
+  mso-bidi-theme-font:minor-latin'><span style='mso-spacerun:yes'></span>}<o:p></o:p></span></p>
   <p class=MsoNormal style='margin-top:0in;margin-right:3.0in;margin-bottom:
   0in;margin-left:0in;margin-bottom:.0001pt;line-height:normal'><span
   style='font-size:12.0pt;mso-bidi-font-size:11.0pt;mso-bidi-font-family:Calibri;
@@ -1450,28 +1450,28 @@ numerical variables <o:p></o:p></span></b></p>
   <p class=MsoNormal style='margin-top:0in;margin-right:3.0in;margin-bottom:
   0in;margin-left:0in;margin-bottom:.0001pt;line-height:normal'><span
   style='font-size:12.0pt;mso-bidi-font-size:11.0pt;mso-bidi-font-family:Calibri;
-  mso-bidi-theme-font:minor-latin'><span style='mso-spacerun:yes'> </span>for
+  mso-bidi-theme-font:minor-latin'><span style='mso-spacerun:yes'></span>for
   (i in 1: ncol(data_with_only_num) ){<o:p></o:p></span></p>
   <p class=MsoNormal style='margin-top:0in;margin-right:3.0in;margin-bottom:
   0in;margin-left:0in;margin-bottom:.0001pt;line-height:normal'><span
   style='font-size:12.0pt;mso-bidi-font-size:11.0pt;mso-bidi-font-family:Calibri;
-  mso-bidi-theme-font:minor-latin'><span style='mso-spacerun:yes'>  
+  mso-bidi-theme-font:minor-latin'><span style='mso-spacerun:yes'> 
   </span>cat(&quot;\n################################### \n &quot;)<o:p></o:p></span></p>
   <p class=MsoNormal style='margin-top:0in;margin-right:3.0in;margin-bottom:
   0in;margin-left:0in;margin-bottom:.0001pt;line-height:normal'><span
   style='font-size:12.0pt;mso-bidi-font-size:11.0pt;mso-bidi-font-family:Calibri;
-  mso-bidi-theme-font:minor-latin'><span style='mso-spacerun:yes'>  
+  mso-bidi-theme-font:minor-latin'><span style='mso-spacerun:yes'> 
   </span>cat(&quot; percentile #&quot;, i, names(data_with_only_num)[i],
   &quot;\n&quot; )<o:p></o:p></span></p>
   <p class=MsoNormal style='margin-top:0in;margin-right:3.0in;margin-bottom:
   0in;margin-left:0in;margin-bottom:.0001pt;line-height:normal'><span
   style='font-size:12.0pt;mso-bidi-font-size:11.0pt;mso-bidi-font-family:Calibri;
-  mso-bidi-theme-font:minor-latin'><span style='mso-spacerun:yes'>  
+  mso-bidi-theme-font:minor-latin'><span style='mso-spacerun:yes'> 
   </span>print(quantile(data_with_only_num[[i]], probs = seq(0, 1, 0.1) ))<o:p></o:p></span></p>
   <p class=MsoNormal style='margin-top:0in;margin-right:3.0in;margin-bottom:
   0in;margin-left:0in;margin-bottom:.0001pt;line-height:normal'><span
   style='font-size:12.0pt;mso-bidi-font-size:11.0pt;mso-bidi-font-family:Calibri;
-  mso-bidi-theme-font:minor-latin'><span style='mso-spacerun:yes'>    </span>}<o:p></o:p></span></p>
+  mso-bidi-theme-font:minor-latin'><span style='mso-spacerun:yes'>  </span>}<o:p></o:p></span></p>
   <p class=MsoNormal style='margin-top:0in;margin-right:3.0in;margin-bottom:
   0in;margin-left:0in;margin-bottom:.0001pt;line-height:normal'><span
   style='font-size:12.0pt;mso-bidi-font-size:11.0pt;mso-bidi-font-family:Calibri;
@@ -1650,7 +1650,7 @@ Calibri;mso-bidi-theme-font:minor-latin'>Step 3: Normalize numerical features
   <p class=MsoNormal style='margin-top:0in;margin-right:3.0in;margin-bottom:
   0in;margin-left:0in;margin-bottom:.0001pt;line-height:normal'><span
   style='font-size:12.0pt;mso-bidi-font-size:11.0pt;mso-bidi-font-family:Calibri;
-  mso-bidi-theme-font:minor-latin'><span style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
+  mso-bidi-theme-font:minor-latin'><span style='mso-spacerun:yes'> </span><o:p></o:p></span></p>
   <p class=MsoNormal style='margin-top:0in;margin-right:3.0in;margin-bottom:
   0in;margin-left:0in;margin-bottom:.0001pt;line-height:normal'><span
   style='font-size:12.0pt;mso-bidi-font-size:11.0pt;mso-bidi-font-family:Calibri;
@@ -1983,61 +1983,61 @@ the best performing one<o:p></o:p></span></b></p>
   font-family:"Lucida Console";mso-fareast-font-family:"Times New Roman";
   mso-bidi-font-family:"Courier New";color:black;border:none windowtext 1.0pt;
   mso-border-alt:none windowtext 0in;padding:0in'><span
-  style='mso-spacerun:yes'>           </span>Accuracy : 0.7604<span
-  style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
+  style='mso-spacerun:yes'>      </span>Accuracy : 0.7604<span
+  style='mso-spacerun:yes'> </span><o:p></o:p></span></p>
   <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;text-indent:
   24.0pt;line-height:11.25pt;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
   background:white;word-break:break-all'><span style='font-size:10.0pt;
   font-family:"Lucida Console";mso-fareast-font-family:"Times New Roman";
   mso-bidi-font-family:"Courier New";color:black;border:none windowtext 1.0pt;
   mso-border-alt:none windowtext 0in;padding:0in'><span
-  style='mso-spacerun:yes'>        </span><o:p></o:p></span></p>
+  style='mso-spacerun:yes'>    </span><o:p></o:p></span></p>
   <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
   11.25pt;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
   background:white;word-break:break-all'><span style='font-size:10.0pt;
   font-family:"Lucida Console";mso-fareast-font-family:"Times New Roman";
   mso-bidi-font-family:"Courier New";color:black;border:none windowtext 1.0pt;
   mso-border-alt:none windowtext 0in;padding:0in'><span
-  style='mso-spacerun:yes'>                 </span>95% CI : (0.7467, 0.7737)<o:p></o:p></span></p>
+  style='mso-spacerun:yes'>         </span>95% CI : (0.7467, 0.7737)<o:p></o:p></span></p>
   <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
   11.25pt;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
   background:white;word-break:break-all'><span style='font-size:10.0pt;
   font-family:"Lucida Console";mso-fareast-font-family:"Times New Roman";
   mso-bidi-font-family:"Courier New";color:black;border:none windowtext 1.0pt;
   mso-border-alt:none windowtext 0in;padding:0in'><span
-  style='mso-spacerun:yes'>    </span>No Information Rate : 0.2845<span
-  style='mso-spacerun:yes'>          </span><o:p></o:p></span></p>
+  style='mso-spacerun:yes'>  </span>No Information Rate : 0.2845<span
+  style='mso-spacerun:yes'>     </span><o:p></o:p></span></p>
   <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
   11.25pt;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
   background:white;word-break:break-all'><span style='font-size:10.0pt;
   font-family:"Lucida Console";mso-fareast-font-family:"Times New Roman";
   mso-bidi-font-family:"Courier New";color:black;border:none windowtext 1.0pt;
   mso-border-alt:none windowtext 0in;padding:0in'><span
-  style='mso-spacerun:yes'>    </span>P-Value [Acc &gt; NIR] : &lt;
-  2.2e-16<span style='mso-spacerun:yes'>       </span><o:p></o:p></span></p>
+  style='mso-spacerun:yes'>  </span>P-Value [Acc &gt; NIR] : &lt;
+  2.2e-16<span style='mso-spacerun:yes'>    </span><o:p></o:p></span></p>
   <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
   11.25pt;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
   background:white;word-break:break-all'><span style='font-size:10.0pt;
   font-family:"Lucida Console";mso-fareast-font-family:"Times New Roman";
   mso-bidi-font-family:"Courier New";color:black;border:none windowtext 1.0pt;
   mso-border-alt:none windowtext 0in;padding:0in'><span
-  style='mso-spacerun:yes'>                                          </span><o:p></o:p></span></p>
+  style='mso-spacerun:yes'>                     </span><o:p></o:p></span></p>
   <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
   11.25pt;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
   background:white;word-break:break-all'><span style='font-size:10.0pt;
   font-family:"Lucida Console";mso-fareast-font-family:"Times New Roman";
   mso-bidi-font-family:"Courier New";color:black;border:none windowtext 1.0pt;
   mso-border-alt:none windowtext 0in;padding:0in'><span
-  style='mso-spacerun:yes'>                  </span>Kappa : 0.696<span
-  style='mso-spacerun:yes'>           </span><o:p></o:p></span></p>
+  style='mso-spacerun:yes'>         </span>Kappa : 0.696<span
+  style='mso-spacerun:yes'>      </span><o:p></o:p></span></p>
   <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
   11.25pt;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
   background:white;word-break:break-all'><span style='font-size:10.0pt;
   font-family:"Lucida Console";mso-fareast-font-family:"Times New Roman";
   mso-bidi-font-family:"Courier New";color:black;border:none windowtext 1.0pt;
   mso-border-alt:none windowtext 0in;padding:0in'><span
-  style='mso-spacerun:yes'> </span>Mcnemar's Test P-Value : &lt; 2.2e-16<span
-  style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
+  style='mso-spacerun:yes'></span>Mcnemar's Test P-Value : &lt; 2.2e-16<span
+  style='mso-spacerun:yes'> </span><o:p></o:p></span></p>
   <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
   11.25pt;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
   background:white;word-break:break-all'><span style='font-size:10.0pt;
@@ -2052,31 +2052,31 @@ the best performing one<o:p></o:p></span></b></p>
   border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'><o:p>&nbsp;</o:p></span></span></pre><pre
   style='line-height:11.25pt;background:white;word-break:break-all'><span
   class=gnkrckgcgsb><span style='font-family:"Lucida Console";color:black;
-  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'><span style='mso-spacerun:yes'>                     </span>Class: A Class: B Class: C Class: D Class: E<o:p></o:p></span></span></pre><pre
+  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'><span style='mso-spacerun:yes'>           </span>Class: A Class: B Class: C Class: D Class: E<o:p></o:p></span></span></pre><pre
   style='line-height:11.25pt;background:white;word-break:break-all'><span
   class=gnkrckgcgsb><span style='font-family:"Lucida Console";color:black;
-  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'>Sensitivity<span style='mso-spacerun:yes'>            </span>0.8746<span style='mso-spacerun:yes'>   </span>0.6877<span style='mso-spacerun:yes'>   </span>0.7354<span style='mso-spacerun:yes'>   </span>0.7341<span style='mso-spacerun:yes'>   </span>0.7074<o:p></o:p></span></span></pre><pre
+  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'>Sensitivity<span style='mso-spacerun:yes'>      </span>0.8746<span style='mso-spacerun:yes'>  </span>0.6877<span style='mso-spacerun:yes'>  </span>0.7354<span style='mso-spacerun:yes'>  </span>0.7341<span style='mso-spacerun:yes'>  </span>0.7074<o:p></o:p></span></span></pre><pre
   style='line-height:11.25pt;background:white;word-break:break-all'><span
   class=gnkrckgcgsb><span style='font-family:"Lucida Console";color:black;
-  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'>Specificity<span style='mso-spacerun:yes'>            </span>0.9163<span style='mso-spacerun:yes'>   </span>0.9346<span style='mso-spacerun:yes'>   </span>0.9179<span style='mso-spacerun:yes'>   </span>0.9604<span style='mso-spacerun:yes'>   </span>0.9681<o:p></o:p></span></span></pre><pre
+  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'>Specificity<span style='mso-spacerun:yes'>      </span>0.9163<span style='mso-spacerun:yes'>  </span>0.9346<span style='mso-spacerun:yes'>  </span>0.9179<span style='mso-spacerun:yes'>  </span>0.9604<span style='mso-spacerun:yes'>  </span>0.9681<o:p></o:p></span></span></pre><pre
   style='line-height:11.25pt;background:white;word-break:break-all'><span
   class=gnkrckgcgsb><span style='font-family:"Lucida Console";color:black;
-  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'>Pos Pred Value<span style='mso-spacerun:yes'>      </span><span style='mso-spacerun:yes'>   </span>0.8059<span style='mso-spacerun:yes'>   </span>0.7160<span style='mso-spacerun:yes'>   </span>0.6541<span style='mso-spacerun:yes'>   </span>0.7841<span style='mso-spacerun:yes'>   </span>0.8333<o:p></o:p></span></span></pre><pre
+  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'>Pos Pred Value<span style='mso-spacerun:yes'>   </span><span style='mso-spacerun:yes'> </span>0.8059<span style='mso-spacerun:yes'>  </span>0.7160<span style='mso-spacerun:yes'>  </span>0.6541<span style='mso-spacerun:yes'>  </span>0.7841<span style='mso-spacerun:yes'>  </span>0.8333<o:p></o:p></span></span></pre><pre
   style='line-height:11.25pt;background:white;word-break:break-all'><span
   class=gnkrckgcgsb><span style='font-family:"Lucida Console";color:black;
-  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'>Neg Pred Value<span style='mso-spacerun:yes'>         </span>0.9484<span style='mso-spacerun:yes'>   </span>0.9258<span style='mso-spacerun:yes'>   </span>0.9426<span style='mso-spacerun:yes'>   </span>0.9485<span style='mso-spacerun:yes'>   </span>0.9363<o:p></o:p></span></span></pre><pre
+  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'>Neg Pred Value<span style='mso-spacerun:yes'>     </span>0.9484<span style='mso-spacerun:yes'>  </span>0.9258<span style='mso-spacerun:yes'>  </span>0.9426<span style='mso-spacerun:yes'>  </span>0.9485<span style='mso-spacerun:yes'>  </span>0.9363<o:p></o:p></span></span></pre><pre
   style='line-height:11.25pt;background:white;word-break:break-all'><span
   class=gnkrckgcgsb><span style='font-family:"Lucida Console";color:black;
-  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'>Prevalence<span style='mso-spacerun:yes'>             </span>0.2845<span style='mso-spacerun:yes'>   </span>0.1935<span style='mso-spacerun:yes'>   </span>0.1744<span style='mso-spacerun:yes'>   </span>0.1639<span style='mso-spacerun:yes'>   </span>0.1838<o:p></o:p></span></span></pre><pre
+  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'>Prevalence<span style='mso-spacerun:yes'>       </span>0.2845<span style='mso-spacerun:yes'>  </span>0.1935<span style='mso-spacerun:yes'>  </span>0.1744<span style='mso-spacerun:yes'>  </span>0.1639<span style='mso-spacerun:yes'>  </span>0.1838<o:p></o:p></span></span></pre><pre
   style='line-height:11.25pt;background:white;word-break:break-all'><span
   class=gnkrckgcgsb><span style='font-family:"Lucida Console";color:black;
-  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'>Detection Rate<span style='mso-spacerun:yes'>         </span>0.2488<span style='mso-spacerun:yes'>   </span>0.1331<span style='mso-spacerun:yes'>   </span>0.1282<span style='mso-spacerun:yes'>   </span>0.1203<span style='mso-spacerun:yes'>   </span>0.1300<o:p></o:p></span></span></pre><pre
+  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'>Detection Rate<span style='mso-spacerun:yes'>     </span>0.2488<span style='mso-spacerun:yes'>  </span>0.1331<span style='mso-spacerun:yes'>  </span>0.1282<span style='mso-spacerun:yes'>  </span>0.1203<span style='mso-spacerun:yes'>  </span>0.1300<o:p></o:p></span></span></pre><pre
   style='line-height:11.25pt;background:white;word-break:break-all'><span
   class=gnkrckgcgsb><span style='font-family:"Lucida Console";color:black;
-  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'>Detection Prevalence<span style='mso-spacerun:yes'>   </span>0.3087<span style='mso-spacerun:yes'>   </span>0.1858<span style='mso-spacerun:yes'>   </span>0.1960<span style='mso-spacerun:yes'>   </span>0.1535<span style='mso-spacerun:yes'>   </span>0.1560<o:p></o:p></span></span></pre><pre
+  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'>Detection Prevalence<span style='mso-spacerun:yes'>  </span>0.3087<span style='mso-spacerun:yes'>  </span>0.1858<span style='mso-spacerun:yes'>  </span>0.1960<span style='mso-spacerun:yes'>  </span>0.1535<span style='mso-spacerun:yes'>  </span>0.1560<o:p></o:p></span></span></pre><pre
   style='line-height:11.25pt;background:white;word-break:break-all'><span
   class=gnkrckgcgsb><span style='font-family:"Lucida Console";color:black;
-  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'>Balanced Accuracy<span style='mso-spacerun:yes'>      </span>0.8954<span style='mso-spacerun:yes'>   </span>0.8112<span style='mso-spacerun:yes'>   </span>0.8266<span style='mso-spacerun:yes'>   </span>0.8472<span style='mso-spacerun:yes'>   </span>0.8377</span></span></pre>
+  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'>Balanced Accuracy<span style='mso-spacerun:yes'>   </span>0.8954<span style='mso-spacerun:yes'>  </span>0.8112<span style='mso-spacerun:yes'>  </span>0.8266<span style='mso-spacerun:yes'>  </span>0.8472<span style='mso-spacerun:yes'>  </span>0.8377</span></span></pre>
   <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
   11.25pt;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
   background:white;word-break:break-all'><span style='font-size:10.0pt;
@@ -2099,28 +2099,28 @@ the best performing one<o:p></o:p></span></b></p>
   mso-bidi-theme-font:minor-latin'>Decision tree<o:p></o:p></span></u></p>
   <pre style='line-height:11.25pt;background:white;word-break:break-all'><span
   class=gnkrckgcgsb><span style='font-family:"Lucida Console";color:black;
-  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'><span style='mso-spacerun:yes'>               </span>Accuracy : 0.8175<span style='mso-spacerun:yes'>  </span><o:p></o:p></span></span></pre><pre
+  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'><span style='mso-spacerun:yes'>        </span>Accuracy : 0.8175<span style='mso-spacerun:yes'> </span><o:p></o:p></span></span></pre><pre
   style='line-height:11.25pt;background:white;word-break:break-all'><span
   class=gnkrckgcgsb><span style='font-family:"Lucida Console";color:black;
-  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'><span style='mso-spacerun:yes'>       </span><o:p></o:p></span></span></pre><pre
+  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'><span style='mso-spacerun:yes'>   </span><o:p></o:p></span></span></pre><pre
   style='line-height:11.25pt;background:white;word-break:break-all'><span
   class=gnkrckgcgsb><span style='font-family:"Lucida Console";color:black;
-  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'><span style='mso-spacerun:yes'>                 </span>95% CI : (0.805, 0.8295)<o:p></o:p></span></span></pre><pre
+  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'><span style='mso-spacerun:yes'>        </span>95% CI : (0.805, 0.8295)<o:p></o:p></span></span></pre><pre
   style='line-height:11.25pt;background:white;word-break:break-all'><span
   class=gnkrckgcgsb><span style='font-family:"Lucida Console";color:black;
-  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'><span style='mso-spacerun:yes'>    </span>No Information Rate : 0.2845<span style='mso-spacerun:yes'>   </span><span style='mso-spacerun:yes'>      </span><o:p></o:p></span></span></pre><pre
+  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'><span style='mso-spacerun:yes'>  </span>No Information Rate : 0.2845<span style='mso-spacerun:yes'>  </span><span style='mso-spacerun:yes'>   </span><o:p></o:p></span></span></pre><pre
   style='line-height:11.25pt;background:white;word-break:break-all'><span
   class=gnkrckgcgsb><span style='font-family:"Lucida Console";color:black;
-  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'><span style='mso-spacerun:yes'>    </span>P-Value [Acc &gt; NIR] : &lt; 2.2e-16<span style='mso-spacerun:yes'>      </span><o:p></o:p></span></span></pre><pre
+  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'><span style='mso-spacerun:yes'>  </span>P-Value [Acc &gt; NIR] : &lt; 2.2e-16<span style='mso-spacerun:yes'>   </span><o:p></o:p></span></span></pre><pre
   style='line-height:11.25pt;background:white;word-break:break-all'><span
   class=gnkrckgcgsb><span style='font-family:"Lucida Console";color:black;
-  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'><span style='mso-spacerun:yes'>                                         </span><o:p></o:p></span></span></pre><pre
+  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'><span style='mso-spacerun:yes'>                    </span><o:p></o:p></span></span></pre><pre
   style='line-height:11.25pt;background:white;word-break:break-all'><span
   class=gnkrckgcgsb><span style='font-family:"Lucida Console";color:black;
-  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'><span style='mso-spacerun:yes'>                  </span>Kappa : 0.7686<span style='mso-spacerun:yes'>         </span><o:p></o:p></span></span></pre><pre
+  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'><span style='mso-spacerun:yes'>         </span>Kappa : 0.7686<span style='mso-spacerun:yes'>     </span><o:p></o:p></span></span></pre><pre
   style='line-height:11.25pt;background:white;word-break:break-all'><span
   class=gnkrckgcgsb><span style='font-family:"Lucida Console";color:black;
-  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'><span style='mso-spacerun:yes'> </span>Mcnemar's Test P-Value : &lt; 2.2e-16 <o:p></o:p></span></span></pre><pre
+  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'><span style='mso-spacerun:yes'></span>Mcnemar's Test P-Value : &lt; 2.2e-16 <o:p></o:p></span></span></pre><pre
   style='line-height:11.25pt;background:white;word-break:break-all'><span
   class=gnkrckgcgsb><span style='font-family:"Lucida Console";color:black;
   border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'><o:p>&nbsp;</o:p></span></span></pre><pre
@@ -2132,34 +2132,34 @@ the best performing one<o:p></o:p></span></b></p>
   border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'><o:p>&nbsp;</o:p></span></span></pre><pre
   style='line-height:11.25pt;background:white;word-break:break-all'><span
   class=gnkrckgcgsb><span style='font-family:"Lucida Console";color:black;
-  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'><span style='mso-spacerun:yes'>                     </span>Class: A Class: B Class: C Class: D Class: E<o:p></o:p></span></span></pre><pre
+  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'><span style='mso-spacerun:yes'>           </span>Class: A Class: B Class: C Class: D Class: E<o:p></o:p></span></span></pre><pre
   style='line-height:11.25pt;background:white;word-break:break-all'><span
   class=gnkrckgcgsb><span style='font-family:"Lucida Console";color:black;
-  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'>Sensitivity<span style='mso-spacerun:yes'>            </span>0.9400<span style='mso-spacerun:yes'>   </span>0.6930<span style='mso-spacerun:yes'>   </span>0.8538<span style='mso-spacerun:yes'>   </span>0.7963<span style='mso-spacerun:yes'>   </span>0.7434<o:p></o:p></span></span></pre><pre
+  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'>Sensitivity<span style='mso-spacerun:yes'>      </span>0.9400<span style='mso-spacerun:yes'>  </span>0.6930<span style='mso-spacerun:yes'>  </span>0.8538<span style='mso-spacerun:yes'>  </span>0.7963<span style='mso-spacerun:yes'>  </span>0.7434<o:p></o:p></span></span></pre><pre
   style='line-height:11.25pt;background:white;word-break:break-all'><span
   class=gnkrckgcgsb><span style='font-family:"Lucida Console";color:black;
-  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'>Specificity<span style='mso-spacerun:yes'>            </span>0.9444<span style='mso-spacerun:yes'>   </span>0.9608<span style='mso-spacerun:yes'>   </span>0.9645<span style='mso-spacerun:yes'>   </span>0.9485<span style='mso-spacerun:yes'>   </span>0.9525<o:p></o:p></span></span></pre><pre
+  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'>Specificity<span style='mso-spacerun:yes'>      </span>0.9444<span style='mso-spacerun:yes'>  </span>0.9608<span style='mso-spacerun:yes'>  </span>0.9645<span style='mso-spacerun:yes'>  </span>0.9485<span style='mso-spacerun:yes'>  </span>0.9525<o:p></o:p></span></span></pre><pre
   style='line-height:11.25pt;background:white;word-break:break-all'><span
   class=gnkrckgcgsb><span style='font-family:"Lucida Console";color:black;
-  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'>Pos Pred Value<span style='mso-spacerun:yes'>         </span>0.8705<span style='mso-spacerun:yes'>   </span>0.8092<span style='mso-spacerun:yes'>   </span>0.8355<span style='mso-spacerun:yes'>   </span>0.7518<span style='mso-spacerun:yes'>   </span>0.7791<o:p></o:p></span></span></pre><pre
+  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'>Pos Pred Value<span style='mso-spacerun:yes'>     </span>0.8705<span style='mso-spacerun:yes'>  </span>0.8092<span style='mso-spacerun:yes'>  </span>0.8355<span style='mso-spacerun:yes'>  </span>0.7518<span style='mso-spacerun:yes'>  </span>0.7791<o:p></o:p></span></span></pre><pre
   style='line-height:11.25pt;background:white;word-break:break-all'><span
   class=gnkrckgcgsb><span style='font-family:"Lucida Console";color:black;
-  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'>Neg Pred Value<span style='mso-spacerun:yes'>         </span>0.9753<span style='mso-spacerun:yes'>   </span>0.9288<span style='mso-spacerun:yes'>   </span>0.9690<span style='mso-spacerun:yes'>   </span>0.9596<span style='mso-spacerun:yes'>   </span>0.9428<o:p></o:p></span></span></pre><pre
+  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'>Neg Pred Value<span style='mso-spacerun:yes'>     </span>0.9753<span style='mso-spacerun:yes'>  </span>0.9288<span style='mso-spacerun:yes'>  </span>0.9690<span style='mso-spacerun:yes'>  </span>0.9596<span style='mso-spacerun:yes'>  </span>0.9428<o:p></o:p></span></span></pre><pre
   style='line-height:11.25pt;background:white;word-break:break-all'><span
   class=gnkrckgcgsb><span style='font-family:"Lucida Console";color:black;
-  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'>Prevalence<span style='mso-spacerun:yes'>             </span>0.2845<span style='mso-spacerun:yes'>   </span>0.1935<span style='mso-spacerun:yes'>   </span>0.1744<span style='mso-spacerun:yes'>   </span>0.1639<span style='mso-spacerun:yes'>   </span>0.1838<o:p></o:p></span></span></pre><pre
+  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'>Prevalence<span style='mso-spacerun:yes'>       </span>0.2845<span style='mso-spacerun:yes'>  </span>0.1935<span style='mso-spacerun:yes'>  </span>0.1744<span style='mso-spacerun:yes'>  </span>0.1639<span style='mso-spacerun:yes'>  </span>0.1838<o:p></o:p></span></span></pre><pre
   style='line-height:11.25pt;background:white;word-break:break-all'><span
   class=gnkrckgcgsb><span style='font-family:"Lucida Console";color:black;
-  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'>Detection Rate<span style='mso-spacerun:yes'>         </span>0.2674<span style='mso-spacerun:yes'>   </span>0.1341<span style='mso-spacerun:yes'>   </span>0.1489<span style='mso-spacerun:yes'>   </span>0.1305<span style='mso-spacerun:yes'>   </span>0.1366<o:p></o:p></span></span></pre><pre
+  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'>Detection Rate<span style='mso-spacerun:yes'>     </span>0.2674<span style='mso-spacerun:yes'>  </span>0.1341<span style='mso-spacerun:yes'>  </span>0.1489<span style='mso-spacerun:yes'>  </span>0.1305<span style='mso-spacerun:yes'>  </span>0.1366<o:p></o:p></span></span></pre><pre
   style='line-height:11.25pt;background:white;word-break:break-all'><span
   class=gnkrckgcgsb><span style='font-family:"Lucida Console";color:black;
-  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'>Detection Prevalence<span style='mso-spacerun:yes'>   </span>0.3072<span style='mso-spacerun:yes'>   </span>0.1657<span style='mso-spacerun:yes'>   </span>0.1782<span style='mso-spacerun:yes'>   </span>0.1736<span style='mso-spacerun:yes'>   </span>0.1754<o:p></o:p></span></span></pre><pre
+  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'>Detection Prevalence<span style='mso-spacerun:yes'>  </span>0.3072<span style='mso-spacerun:yes'>  </span>0.1657<span style='mso-spacerun:yes'>  </span>0.1782<span style='mso-spacerun:yes'>  </span>0.1736<span style='mso-spacerun:yes'>  </span>0.1754<o:p></o:p></span></span></pre><pre
   style='line-height:11.25pt;background:white;word-break:break-all'><span
   class=gnkrckgcgsb><span style='font-family:"Lucida Console";color:black;
-  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'>Balanced Accuracy<span style='mso-spacerun:yes'>      </span>0.9422<span style='mso-spacerun:yes'>   </span>0.8269<span style='mso-spacerun:yes'>   </span>0.9091<span style='mso-spacerun:yes'>   </span>0.8724<span style='mso-spacerun:yes'>   </span>0.8480</span></span></pre><pre
+  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'>Balanced Accuracy<span style='mso-spacerun:yes'>   </span>0.9422<span style='mso-spacerun:yes'>  </span>0.8269<span style='mso-spacerun:yes'>  </span>0.9091<span style='mso-spacerun:yes'>  </span>0.8724<span style='mso-spacerun:yes'>  </span>0.8480</span></span></pre><pre
   style='line-height:11.25pt;background:white;word-break:break-all'><span
   class=gnkrckgcgsb><span style='font-family:"Lucida Console";color:black;
-  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'><span style='mso-spacerun:yes'>     </span></span></span><span
+  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'><span style='mso-spacerun:yes'>   </span></span></span><span
   style='font-family:"Lucida Console";color:black'><o:p></o:p></span></pre>
   <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;mso-line-height-alt:
   11.25pt;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
@@ -2178,33 +2178,33 @@ the best performing one<o:p></o:p></span></b></p>
   forest<o:p></o:p></span></u></p>
   <pre style='line-height:11.25pt;background:white;word-break:break-all'><span
   class=gnkrckgcgsb><span style='font-family:"Lucida Console";color:black;
-  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'><span style='mso-spacerun:yes'>               </span><span
-  style='background:yellow;mso-highlight:yellow'>Accuracy : 0.9985</span><span style='mso-spacerun:yes'>    </span></span><span
+  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'><span style='mso-spacerun:yes'>        </span><span
+  style='background:yellow;mso-highlight:yellow'>Accuracy : 0.9985</span><span style='mso-spacerun:yes'>  </span></span><span
   style='border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
   padding:0in'><o:p></o:p></span></span></pre><pre style='line-height:11.25pt;
   background:white;word-break:break-all'><span class=gnkrckgcgsb><span
   style='font-family:"Lucida Console";color:black;border:none windowtext 1.0pt;
-  mso-border-alt:none windowtext 0in;padding:0in'><span style='mso-spacerun:yes'>      </span></span><span
+  mso-border-alt:none windowtext 0in;padding:0in'><span style='mso-spacerun:yes'>   </span></span><span
   style='border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;
   padding:0in'><o:p></o:p></span></span></pre><pre style='line-height:11.25pt;
   background:white;word-break:break-all'><span class=gnkrckgcgsb><span
   style='font-family:"Lucida Console";color:black;border:none windowtext 1.0pt;
-  mso-border-alt:none windowtext 0in;padding:0in'><span style='mso-spacerun:yes'>                 </span>95% CI : (0.9967, 0.9994)<o:p></o:p></span></span></pre><pre
+  mso-border-alt:none windowtext 0in;padding:0in'><span style='mso-spacerun:yes'>        </span>95% CI : (0.9967, 0.9994)<o:p></o:p></span></span></pre><pre
   style='line-height:11.25pt;background:white;word-break:break-all'><span
   class=gnkrckgcgsb><span style='font-family:"Lucida Console";color:black;
-  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'><span style='mso-spacerun:yes'>    </span>No Information Rate : 0.2845<span style='mso-spacerun:yes'>          </span><o:p></o:p></span></span></pre><pre
+  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'><span style='mso-spacerun:yes'>  </span>No Information Rate : 0.2845<span style='mso-spacerun:yes'>     </span><o:p></o:p></span></span></pre><pre
   style='line-height:11.25pt;background:white;word-break:break-all'><span
   class=gnkrckgcgsb><span style='font-family:"Lucida Console";color:black;
-  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'><span style='mso-spacerun:yes'>    </span>P-Value [Acc &gt; NIR] : &lt; 2.2e-16<span style='mso-spacerun:yes'>       </span><o:p></o:p></span></span></pre><pre
+  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'><span style='mso-spacerun:yes'>  </span>P-Value [Acc &gt; NIR] : &lt; 2.2e-16<span style='mso-spacerun:yes'>    </span><o:p></o:p></span></span></pre><pre
   style='line-height:11.25pt;background:white;word-break:break-all'><span
   class=gnkrckgcgsb><span style='font-family:"Lucida Console";color:black;
-  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'><span style='mso-spacerun:yes'>                                          </span><o:p></o:p></span></span></pre><pre
+  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'><span style='mso-spacerun:yes'>                     </span><o:p></o:p></span></span></pre><pre
   style='line-height:11.25pt;background:white;word-break:break-all'><span
   class=gnkrckgcgsb><span style='font-family:"Lucida Console";color:black;
-  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'><span style='mso-spacerun:yes'>                  </span>Kappa : 0.9981<span style='mso-spacerun:yes'>          </span><o:p></o:p></span></span></pre><pre
+  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'><span style='mso-spacerun:yes'>         </span>Kappa : 0.9981<span style='mso-spacerun:yes'>     </span><o:p></o:p></span></span></pre><pre
   style='line-height:11.25pt;background:white;word-break:break-all'><span
   class=gnkrckgcgsb><span style='font-family:"Lucida Console";color:black;
-  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'><span style='mso-spacerun:yes'> </span>Mcnemar's Test P-Value : NA<span style='mso-spacerun:yes'>  </span></span><o:p></o:p></span></pre><pre
+  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'><span style='mso-spacerun:yes'></span>Mcnemar's Test P-Value : NA<span style='mso-spacerun:yes'> </span></span><o:p></o:p></span></pre><pre
   style='line-height:11.25pt;background:white;word-break:break-all'><span
   class=gnkrckgcgsb><span style='border:none windowtext 1.0pt;mso-border-alt:
   none windowtext 0in;padding:0in'><o:p>&nbsp;</o:p></span></span></pre><pre
@@ -2216,31 +2216,31 @@ the best performing one<o:p></o:p></span></b></p>
   border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'><o:p>&nbsp;</o:p></span></span></pre><pre
   style='line-height:11.25pt;background:white;word-break:break-all'><span
   class=gnkrckgcgsb><span style='font-family:"Lucida Console";color:black;
-  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'><span style='mso-spacerun:yes'>                     </span>Class: A Class: B Class: C Class: D Class: E<o:p></o:p></span></span></pre><pre
+  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'><span style='mso-spacerun:yes'>           </span>Class: A Class: B Class: C Class: D Class: E<o:p></o:p></span></span></pre><pre
   style='line-height:11.25pt;background:white;word-break:break-all'><span
   class=gnkrckgcgsb><span style='font-family:"Lucida Console";color:black;
-  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'>Sensitivity<span style='mso-spacerun:yes'>            </span>1.0000<span style='mso-spacerun:yes'>   </span>0.9947<span style='mso-spacerun:yes'>   </span>0.9985<span style='mso-spacerun:yes'>   </span>0.9984<span style='mso-spacerun:yes'>   </span>1.0000<o:p></o:p></span></span></pre><pre
+  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'>Sensitivity<span style='mso-spacerun:yes'>      </span>1.0000<span style='mso-spacerun:yes'>  </span>0.9947<span style='mso-spacerun:yes'>  </span>0.9985<span style='mso-spacerun:yes'>  </span>0.9984<span style='mso-spacerun:yes'>  </span>1.0000<o:p></o:p></span></span></pre><pre
   style='line-height:11.25pt;background:white;word-break:break-all'><span
   class=gnkrckgcgsb><span style='font-family:"Lucida Console";color:black;
-  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'>Specificity<span style='mso-spacerun:yes'>            </span>0.9986<span style='mso-spacerun:yes'>   </span>0.9997<span style='mso-spacerun:yes'>   </span>0.9997<span style='mso-spacerun:yes'>   </span>1.0000<span style='mso-spacerun:yes'>   </span>1.0000<o:p></o:p></span></span></pre><pre
+  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'>Specificity<span style='mso-spacerun:yes'>      </span>0.9986<span style='mso-spacerun:yes'>  </span>0.9997<span style='mso-spacerun:yes'>  </span>0.9997<span style='mso-spacerun:yes'>  </span>1.0000<span style='mso-spacerun:yes'>  </span>1.0000<o:p></o:p></span></span></pre><pre
   style='line-height:11.25pt;background:white;word-break:break-all'><span
   class=gnkrckgcgsb><span style='font-family:"Lucida Console";color:black;
-  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'>Pos Pred Value<span style='mso-spacerun:yes'>         </span>0.9964<span style='mso-spacerun:yes'>   </span>0.9987<span style='mso-spacerun:yes'>   </span>0.9985<span style='mso-spacerun:yes'>   </span>1.0000<span style='mso-spacerun:yes'>   </span>1.0000<o:p></o:p></span></span></pre><pre
+  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'>Pos Pred Value<span style='mso-spacerun:yes'>     </span>0.9964<span style='mso-spacerun:yes'>  </span>0.9987<span style='mso-spacerun:yes'>  </span>0.9985<span style='mso-spacerun:yes'>  </span>1.0000<span style='mso-spacerun:yes'>  </span>1.0000<o:p></o:p></span></span></pre><pre
   style='line-height:11.25pt;background:white;word-break:break-all'><span
   class=gnkrckgcgsb><span style='font-family:"Lucida Console";color:black;
-  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'>Neg Pred Value<span style='mso-spacerun:yes'>         </span>1.0000<span style='mso-spacerun:yes'>   </span>0.9987<span style='mso-spacerun:yes'>   </span>0.9997<span style='mso-spacerun:yes'>   </span>0.9997<span style='mso-spacerun:yes'>   </span>1.0000<o:p></o:p></span></span></pre><pre
+  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'>Neg Pred Value<span style='mso-spacerun:yes'>     </span>1.0000<span style='mso-spacerun:yes'>  </span>0.9987<span style='mso-spacerun:yes'>  </span>0.9997<span style='mso-spacerun:yes'>  </span>0.9997<span style='mso-spacerun:yes'>  </span>1.0000<o:p></o:p></span></span></pre><pre
   style='line-height:11.25pt;background:white;word-break:break-all'><span
   class=gnkrckgcgsb><span style='font-family:"Lucida Console";color:black;
-  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'>Prevalence<span style='mso-spacerun:yes'>             </span>0.2845<span style='mso-spacerun:yes'>   </span>0.1935<span style='mso-spacerun:yes'>   </span>0.1744<span style='mso-spacerun:yes'>   </span>0.1639<span style='mso-spacerun:yes'>   </span>0.1838<o:p></o:p></span></span></pre><pre
+  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'>Prevalence<span style='mso-spacerun:yes'>       </span>0.2845<span style='mso-spacerun:yes'>  </span>0.1935<span style='mso-spacerun:yes'>  </span>0.1744<span style='mso-spacerun:yes'>  </span>0.1639<span style='mso-spacerun:yes'>  </span>0.1838<o:p></o:p></span></span></pre><pre
   style='line-height:11.25pt;background:white;word-break:break-all'><span
   class=gnkrckgcgsb><span style='font-family:"Lucida Console";color:black;
-  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'>Detection Rate <span style='mso-spacerun:yes'>        </span>0.2845<span style='mso-spacerun:yes'>   </span>0.1925<span style='mso-spacerun:yes'>   </span>0.1741<span style='mso-spacerun:yes'>   </span>0.1637<span style='mso-spacerun:yes'>   </span>0.1838<o:p></o:p></span></span></pre><pre
+  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'>Detection Rate <span style='mso-spacerun:yes'>    </span>0.2845<span style='mso-spacerun:yes'>  </span>0.1925<span style='mso-spacerun:yes'>  </span>0.1741<span style='mso-spacerun:yes'>  </span>0.1637<span style='mso-spacerun:yes'>  </span>0.1838<o:p></o:p></span></span></pre><pre
   style='line-height:11.25pt;background:white;word-break:break-all'><span
   class=gnkrckgcgsb><span style='font-family:"Lucida Console";color:black;
-  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'>Detection Prevalence<span style='mso-spacerun:yes'>   </span>0.2855<span style='mso-spacerun:yes'>   </span>0.1927<span style='mso-spacerun:yes'>   </span>0.1744<span style='mso-spacerun:yes'>   </span>0.1637<span style='mso-spacerun:yes'>   </span>0.1838<o:p></o:p></span></span></pre><pre
+  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'>Detection Prevalence<span style='mso-spacerun:yes'>  </span>0.2855<span style='mso-spacerun:yes'>  </span>0.1927<span style='mso-spacerun:yes'>  </span>0.1744<span style='mso-spacerun:yes'>  </span>0.1637<span style='mso-spacerun:yes'>  </span>0.1838<o:p></o:p></span></span></pre><pre
   style='line-height:11.25pt;background:white;word-break:break-all'><span
   class=gnkrckgcgsb><span style='font-family:"Lucida Console";color:black;
-  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'>Balanced Accuracy<span style='mso-spacerun:yes'>      </span>0.9993<span style='mso-spacerun:yes'>   </span>0.9972<span style='mso-spacerun:yes'>   </span>0.9991<span style='mso-spacerun:yes'>   </span>0.9992<span style='mso-spacerun:yes'>   </span>1.0000</span></span></pre><pre
+  border:none windowtext 1.0pt;mso-border-alt:none windowtext 0in;padding:0in'>Balanced Accuracy<span style='mso-spacerun:yes'>   </span>0.9993<span style='mso-spacerun:yes'>  </span>0.9972<span style='mso-spacerun:yes'>  </span>0.9991<span style='mso-spacerun:yes'>  </span>0.9992<span style='mso-spacerun:yes'>  </span>1.0000</span></span></pre><pre
   style='line-height:11.25pt;background:white;word-break:break-all'><span
   style='font-family:"Lucida Console";color:black'><o:p>&nbsp;</o:p></span></pre></td>
  </tr>
@@ -2292,7 +2292,7 @@ margin-left:3.0in'><span style='font-size:12.0pt;line-height:105%;mso-bidi-font-
 Helvetica;color:#333333'>Velloso, E., Bulling, A., Gellersen, H., Ugulino, W.
 &amp; Fuks, H. (2013). Qualitative Activity Recognition of Weight Lifting
 Exercises. Proceedings of 4th International Conference in Cooperation with
-SIGCHI (Augmented Human ’13). <o:p></o:p></span></p>
+SIGCHI (Augmented Human Ã’Â±3). <o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-top:0in;margin-right:3.0in;margin-bottom:8.0pt;
 margin-left:3.0in'><span style='font-size:12.0pt;line-height:105%;mso-bidi-font-family:
